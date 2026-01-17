@@ -38,7 +38,7 @@ class BattisTable
                 ImageColumn::make('image_path')
                     ->disk('public')
                     ->label('Image')
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->simplelightbox(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
