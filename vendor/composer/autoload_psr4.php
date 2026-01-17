@@ -48,6 +48,8 @@ return array(
     'Spatie\\ShikiPhp\\' => array($vendorDir . '/spatie/shiki-php/src'),
     'Spatie\\LaravelPackageTools\\' => array($vendorDir . '/spatie/laravel-package-tools/src'),
     'Spatie\\Invade\\' => array($vendorDir . '/spatie/invade/src'),
+    'SolutionForest\\FilamentSimpleLightBox\\Database\\Factories\\' => array($vendorDir . '/solution-forest/filament-simplelightbox/database/factories'),
+    'SolutionForest\\FilamentSimpleLightBox\\' => array($vendorDir . '/solution-forest/filament-simplelightbox/src'),
     'RyanChandler\\BladeCaptureDirective\\Database\\Factories\\' => array($vendorDir . '/ryangjchandler/blade-capture-directive/database/factories'),
     'RyanChandler\\BladeCaptureDirective\\' => array($vendorDir . '/ryangjchandler/blade-capture-directive/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),

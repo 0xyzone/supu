@@ -7638,6 +7638,95 @@
             "install-path": "../sebastian/version"
         },
         {
+            "name": "solution-forest/filament-simplelightbox",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solutionforest/Filament-SimpleLightBox.git",
+                "reference": "fb03ba8087494a3d069c6eae52d88a61156dd82b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/solutionforest/Filament-SimpleLightBox/zipball/fb03ba8087494a3d069c6eae52d88a61156dd82b",
+                "reference": "fb03ba8087494a3d069c6eae52d88a61156dd82b",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^4.0",
+                "filament/infolists": "^4.0",
+                "filament/tables": "^4.0",
+                "illuminate/contracts": ">=10.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "conflict": {
+                "filament/filament": "<4.0",
+                "laravel/framework": "<11.0.0"
+            },
+            "require-dev": {
+                "filament/upgrade": "~4.0",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^8.0",
+                "nunomaduro/termwind": "^2.0",
+                "orchestra/testbench": "^9.0",
+                "pestphp/pest": "^2.1",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "spatie/laravel-ray": "^1.26"
+            },
+            "time": "2025-07-22T09:46:54+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "FilamentSimpleLightBox": "SolutionForest\\FilamentSimpleLightBox\\Facades\\FilamentSimpleLightBox"
+                    },
+                    "providers": [
+                        "SolutionForest\\FilamentSimpleLightBox\\FilamentSimpleLightBoxServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SolutionForest\\FilamentSimpleLightBox\\": "src/",
+                    "SolutionForest\\FilamentSimpleLightBox\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "alan",
+                    "email": "info@solutionforest.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is my package filament-simplelightbox",
+            "homepage": "https://github.com/solutionforest/filament-simplelightbox",
+            "keywords": [
+                "filament-simplelightbox",
+                "laravel",
+                "solutionforest"
+            ],
+            "support": {
+                "issues": "https://github.com/solutionforest/filament-simplelightbox/issues",
+                "source": "https://github.com/solutionforest/filament-simplelightbox"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/SolutionForest",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../solution-forest/filament-simplelightbox"
+        },
+        {
             "name": "spatie/invade",
             "version": "2.1.0",
             "version_normalized": "2.1.0.0",
