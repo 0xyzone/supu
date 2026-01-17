@@ -26,7 +26,7 @@ class MayaluPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('mayalu')
-            ->path('mayalu')
+            ->path('/')
             ->login()
             ->colors([
                 'primary' => Color::Violet,
