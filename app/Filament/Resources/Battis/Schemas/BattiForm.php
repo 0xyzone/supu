@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Battis\Schemas;
 
+use Filament\Forms\Components\Placeholder;
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Repeater;
@@ -19,6 +20,18 @@ class BattiForm
             ->components([
                 Group::make()
                     ->schema([
+                        Placeholder::make('To_pay')
+                            ->label('To Pay Amount')
+                            ->hiddenOn('create')
+                            ->content(fn ($record) => function () use ($record) {
+                                $prev = $record::where('id', '<', $record->id)->latest('id')->first();
+                                $payableAmount = $prev ? ($record->amount - $prev->amount) * $record->unit_rate : 0;
+                                if($record->batti_payments()->count() > 0){
+                                    $totalPaid = $record->batti_payments()->sum('amount');
+                                    $payableAmount -= $totalPaid;
+                                }
+                                return number_format($payableAmount, 2);
+                            }),
                         DatePicker::make('date')
                             ->native(false)
                             ->required(),
@@ -37,6 +50,7 @@ class BattiForm
                 Textarea::make('remarks')
                     ->columnSpanFull(),
                 Section::make('Payments')
+                    ->hiddenOn('create')
                     ->heading('')
                     ->columnSpanFull()
                     ->schema([
