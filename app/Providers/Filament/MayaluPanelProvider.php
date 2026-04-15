@@ -9,9 +9,11 @@ use Filament\Support\Colors\Color;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
 use Filament\Http\Middleware\Authenticate;
+use MWGuerra\FileManager\FileManagerPlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
+use MWGuerra\FileManager\Filament\Pages\FileManager;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -57,7 +59,10 @@ class MayaluPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                SimpleLightBoxPlugin::make()
+                SimpleLightBoxPlugin::make(),
+                FileManagerPlugin::make([
+                    FileManager::class,
+                ]),
             ]);
     }
 }

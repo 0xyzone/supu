@@ -15,13 +15,34 @@ class ExpensesTable
     {
         return $table
             ->columns([
+                TextColumn::make('id')
+                    ->sortable(),
                 TextColumn::make('date')
                     ->date()
                     ->sortable(),
+                TextColumn::make('user.name')
+                    ->label('Recorded By')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('expense_source.name')
+                    ->label('Expense Source')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('doneBy.name')
+                    ->label('Done By')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('amount')
                     ->numeric()
                     ->sortable(),
-                ImageColumn::make('image_path'),
+                TextColumn::make('remarks')
+                    ->label('Remarks')
+                    ->sortable()
+                    ->limit(10)
+                    ->tooltip(fn ($state) => $state),
+                ImageColumn::make('image_path')
+                    ->label('Receipt')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

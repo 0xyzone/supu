@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5227917e4909cde17b769382bb5b9092e20eb156',
+        'reference' => '01833daf5d33333e911015e2fda7e0e44ab3e92b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -562,7 +562,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5227917e4909cde17b769382bb5b9092e20eb156',
+            'reference' => '01833daf5d33333e911015e2fda7e0e44ab3e92b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -744,6 +744,15 @@
             'replaced' => array(
                 0 => '^1.0',
             ),
+        ),
+        'mwguerra/filemanager' => array(
+            'pretty_version' => 'v0.1.8',
+            'version' => '0.1.8.0',
+            'reference' => 'b2f9a0d6f49b6fa86bfcadf82c09f157fe4292f6',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mwguerra/filemanager',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
             'pretty_version' => '1.13.4',

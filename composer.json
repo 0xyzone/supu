@@ -10,6 +10,7 @@
         "filament/filament": "^4.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "mwguerra/filemanager": "^0.1.8",
         "solution-forest/filament-simplelightbox": "^1.0"
     },
     "require-dev": {
