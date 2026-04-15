@@ -20,6 +20,8 @@ class RentResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHome;
     protected static string|BackedEnum|null $activeNavigationIcon = Heroicon::Home;
+    protected static bool $shouldRegisterNavigation = false;
+
 
     protected static ?string $recordTitleAttribute = 'Rent';
 

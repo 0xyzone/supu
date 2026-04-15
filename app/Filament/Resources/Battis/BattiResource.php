@@ -22,6 +22,8 @@ class BattiResource extends Resource
     protected static string|BackedEnum|null $activeNavigationIcon = Heroicon::LightBulb;
 
     protected static ?string $recordTitleAttribute = 'Batti';
+    protected static bool $shouldRegisterNavigation = false;
+
 
     public static function form(Schema $schema): Schema
     {
