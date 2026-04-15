@@ -31,6 +31,8 @@ class MayaluPanelProvider extends PanelProvider
             ->id('mayalu')
             ->path('/')
             ->login()
+            ->passwordReset()
+            ->globalSearch(false)
             ->colors([
                 'primary' => Color::Violet,
             ])

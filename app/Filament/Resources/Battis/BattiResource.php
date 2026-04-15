@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Battis;
 
 use App\Filament\Resources\Battis\Pages\CreateBatti;
-use App\Filament\Resources\Battis\Pages\EditBatti;
+// use App\Filament\Resources\Battis\Pages\EditBatti;
 use App\Filament\Resources\Battis\Pages\ListBattis;
 use App\Filament\Resources\Battis\Schemas\BattiForm;
 use App\Filament\Resources\Battis\Tables\BattisTable;
