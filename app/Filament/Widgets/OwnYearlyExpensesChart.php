@@ -11,14 +11,14 @@ class OwnYearlyExpensesChart extends ChartWidget
     protected static ?int $sort = 3;
     protected function getData(): array
     {
-        $ownExpenses = Expenses::where('user_id', auth()->id())
+        $ownExpenses = Expenses::where('done_by', auth()->id())
             ->selectRaw('MONTH(created_at) as month, SUM(amount) as total')
             ->groupBy('month')
             ->orderBy('month')
             ->get()
             ->keyBy('month')
             ->toArray();
-        $partnerExpenses = Expenses::where('user_id', "!=", auth()->id() ?? null)
+        $partnerExpenses = Expenses::where('done_by', "!=", auth()->id() ?? null)
             ->selectRaw('MONTH(created_at) as month, SUM(amount) as total')
             ->groupBy('month')
             ->orderBy('month')
