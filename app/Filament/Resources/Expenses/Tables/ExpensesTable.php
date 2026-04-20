@@ -6,6 +6,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -33,13 +34,14 @@ class ExpensesTable
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('amount')
+                    ->summarize(Sum::make()->label(''))
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('remarks')
                     ->label('Remarks')
                     ->sortable()
                     ->limit(10)
-                    ->tooltip(fn ($state) => $state),
+                    ->tooltip(fn($state) => $state),
                 ImageColumn::make('image_path')
                     ->label('Receipt')
                     ->toggleable(isToggledHiddenByDefault: true),
