@@ -2,6 +2,7 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Expenses;
 use Filament\Widgets\ChartWidget;
 
 class OwnYearlyExpensesChart extends ChartWidget
@@ -10,14 +11,14 @@ class OwnYearlyExpensesChart extends ChartWidget
     protected static ?int $sort = 3;
     protected function getData(): array
     {
-        $ownExpenses = auth()->user()->expenses()
+        $ownExpenses = Expenses::where('user_id', auth()->id())
             ->selectRaw('MONTH(created_at) as month, SUM(amount) as total')
             ->groupBy('month')
             ->orderBy('month')
             ->get()
             ->keyBy('month')
             ->toArray();
-        $partnerExpenses = auth()->user()->partner?->expenses()
+        $partnerExpenses = Expenses::where('user_id', "!=", auth()->id() ?? null)
             ->selectRaw('MONTH(created_at) as month, SUM(amount) as total')
             ->groupBy('month')
             ->orderBy('month')
