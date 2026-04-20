@@ -9,6 +9,7 @@ class YearlyExpensesChart extends ChartWidget
 {
     protected ?string $heading = 'Yearly Expenses Chart';
     protected static ?int $sort = 2;
+    protected int | string | array $columnSpan = "1/4";
 
     protected function getData(): array
     {
